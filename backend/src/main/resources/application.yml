@@ -1,0 +1,14 @@
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        password: /secret/
+        url: jdbc:mysql://mealtime.mysql.database.azure.com:3306/meal_time_tinder
+        username: /secret/
+    jpa:
+        hibernate:
+            # Only for developing purpose - change value to none for production
+            ddl-auto: update
+    web:
+        resources:
+            static-locations: file:<project-path>/images/
+

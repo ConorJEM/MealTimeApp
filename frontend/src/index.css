@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+
+html, body {
+    margin: 0;
+    padding:0;
+    text-align: center;
+}
+
+h2 {
+    font-style: italic;
+}
+
+* {
+    font-family: 'Readex Pro', sans-serif;
+}
+
+.primary-button {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+    background: linear-gradient(45deg, rgb(254,48,114),rgb(255,89,64));
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+}
+
+.primary-button:hover {
+    background:  linear-gradient(260deg,rgb(254,48,114),rgb(255,89,64));
+    transform:scale(1.1,1.1);
+}
+
+.primary-title {
+    font-size: 90px;
+    color: rgba(255,255,255);
+    -webkit-font-smoothing: antialiased;
+}
+
+.secondary-button {
+    color:rgb(121,119,119);
+    background-color: (255,255,255);
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: solid 2px rgb(121,119,119);
+    margin: 6px;
+}
+
+.secondary-button:hover{
+    color: rgb(48,48,48);
+    border: solid 2px rgb(48,48,48)
+}
+
+
+/* ----- Nav ----- */
+
+nav {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+nav .nav-button {
+    color: rgb(245, 239, 241);
+    /*background-color: rgb(255,255,255);*/
+    background-color: transparent;
+    font-size: 20px;
+    padding: 10px 10px 100px 10px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+    
+}
+nav .nav-button:hover{
+    transform:scale(1.1,1.1);
+    color: rgb(255, 255, 255);
+}
+
+nav .nav-button:disabled{
+    background-color: transparent;
+    color: rgb(66, 61, 61);
+}
+
+nav .logo-container{
+    width:170px;
+    margin:15px;
+
+}
+nav .logo-container .logo {
+    width: 100%;
+}
+
+/* ------------ Home page ------------*/
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.65) 0%,
+        rgba(0,0,0,0) 100%
+
+    ), url('images/background-main-2.jpg')
+}
+
+.home {
+    margin-top: 30vh;
+}
+
+
+/*------ Auth modal --------*/
+
+.auth-modal{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 360px;
+    height: 600px;
+    background-color: rgb(255,255,255);
+    border-radius: 10px;
+    padding: 40px;
+
+}
+.auth-modal .close-icon {
+    float: right;
+}
+
+.auth-modal form{
+    display: flex;
+    flex-direction: column;
+}
+.auth-modal input[type=password],
+.auth-modal input[type=username]{
+    padding:8px;
+    margin:8px;
+    font-size:17px;
+}
+
+/* Dashboard */
+
+
+.dashboard {
+    display:flex;
+    justify-content: space-between;
+    background: linear-gradient(
+        to bottom,
+        rgba(228, 218, 218, 0.65) 0%,
+        rgba(134, 126, 53, 0.35) 100%
+
+    ), url('')
+}
+.swipe {
+    position: absolute;
+  }
+
+ .dashboard .card-container {
+    width: 400px;
+    height: 650px;
+  }
+
+.dashboard .swipe-container {
+    width: 70%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+ 
+  .card {
+
+    background-color: #fff;
+    width: 400px;
+    height: 650px;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.30);
+  }
+  
+
+  .card h3 {
+    position: absolute;
+    top: 0;
+    margin: 10px;
+    color: rgb(202, 16, 16);
+    background: rgba(242, 243, 240, 0.521);
+    border-bottom: 1px solid rgb(5, 2, 2);
+    
+  }
+
+  .dashboard .swipe-info {
+      position: absolute;
+      bottom: 0;
+      padding: 80px;
+
+  }
+
+
+/* Chat container */
+
+.chat-container {
+
+    background-color: rgb(245, 239, 241);
+    box-shadow: rgba(0,0,0,0.05) 0px 6px 24px 0px,
+    rgba(0,0,0,0.08) 0px 0px 0px 1px;
+    width: 30%;
+    text-align: left;
+    z-index: 1;
+
+}
+.matches-display {
+    padding:10px;
+}
+
+.chat-display {
+    padding:10px;
+}
+
+.chat-container .chat-container-header{
+    background: linear-gradient(260deg,rgb(254,48,114),rgb(255,89,64));
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-container .option {
+    border: none;
+    background-color: rgb(255,255,255);
+    border-bottom: solid 4px rgb(245, 33, 33);
+    font-size: 20px;
+    margin: 2px;
+    padding: 10px;
+}
+.chat-container .profile, 
+.chat-container .log-out-icon {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: rgb(255,255,255);
+}
+
+.img-container {
+    height: 30px;
+    width: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 10px;
+    object-fit: cover;
+}
+
+.img-container img {
+    
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+}
+
+.favouritesBar{
+    display:flex;
+    justify-content: space-between;
+}
+.delete-icon{
+    padding:10px;
+}
+.delete-icon:hover{
+    color:rgb(245, 33, 33);
+}
+.match-card:hover{
+    background-color: rgb(202, 212, 212);
+}
+
+.recipe-title{
+    color:rgb(245, 33, 33);
+    text-decoration: underline;
+}
